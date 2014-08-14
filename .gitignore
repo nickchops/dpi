@@ -1,0 +1,12 @@
+.DS\_Store
+.DS_Store
+*.sw?
+build_*
+**/build_temp/**
+**/data-ram/**
+**/resources-ram/**
+**/build_temp/**
+**/resources-ram/**
+**/project_*
+**development.icf
+**/stamp/**

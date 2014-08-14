@@ -1,5 +1,5 @@
 /*
-Generic implementation of the dpiExt extension.
+Generic implementation of the s3ePixelDensity extension.
 This file should perform any platform-indepedentent functionality
 (e.g. error checking) before calling platform-dependent implementations.
 */
@@ -10,20 +10,20 @@ This file should perform any platform-indepedentent functionality
  */
 
 
-#include "dpiExt_internal.h"
-s3eResult dpiExtInit()
+#include "s3ePixelDensity_internal.h"
+s3eResult s3ePixelDensityInit()
 {
     //Add any generic initialisation code here
-    return dpiExtInit_platform();
+    return s3ePixelDensityInit_platform();
 }
 
-void dpiExtTerminate()
+void s3ePixelDensityTerminate()
 {
     //Add any generic termination code here
-    dpiExtTerminate_platform();
+    s3ePixelDensityTerminate_platform();
 }
 
-int dpiExtGetDeviceDPI()
+int s3ePixelDensityGetPPI()
 {
-	return dpiExtGetDeviceDPI_platform();
+	return s3ePixelDensityGetPPI_platform();
 }

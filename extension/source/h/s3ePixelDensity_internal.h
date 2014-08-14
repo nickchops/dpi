@@ -1,10 +1,10 @@
 /*
-Internal header for the dpiExt extension.
-
-This file should be used for any common function definitions etc that need to
-be shared between the platform-dependent and platform-indepdendent parts of
-this extension.
-*/
+ * Internal header for the s3ePixelDensity extension.
+ *
+ * This file should be used for any common function definitions etc that need to
+ * be shared between the platform-dependent and platform-indepdendent parts of
+ * this extension.
+ */
 
 /*
  * NOTE: This file was originally written by the extension builder, but will not
@@ -12,12 +12,12 @@ this extension.
  */
 
 
-#ifndef DPIEXT_H_INTERNAL
-#define DPIEXT_H_INTERNAL
+#ifndef S3EPIXELDENSITY_INTERNAL_H
+#define S3EPIXELDENSITY_INTERNAL_H
 
 #include "s3eTypes.h"
-#include "dpiExt.h"
-#include "dpiExt_autodefs.h"
+#include "s3ePixelDensity.h"
+#include "s3ePixelDensity_autodefs.h"
 
 
 /**
@@ -25,24 +25,24 @@ this extension.
  * accessed by s3eregister.  If this function returns S3E_RESULT_ERROR the
  * extension will be reported as not-existing on the device.
  */
-s3eResult dpiExtInit();
+s3eResult s3ePixelDensityInit();
 
 /**
  * Platform-specific initialisation, implemented on each platform
  */
-s3eResult dpiExtInit_platform();
+s3eResult s3ePixelDensityInit_platform();
 
 /**
  * Terminate the extension.  This is called once on shutdown, but only if the
  * extension was loader and Init() was successful.
  */
-void dpiExtTerminate();
+void s3ePixelDensityTerminate();
 
 /**
  * Platform-specific termination, implemented on each platform
  */
-void dpiExtTerminate_platform();
-int dpiExtGetDeviceDPI_platform();
+void s3ePixelDensityTerminate_platform();
+int s3ePixelDensityGetPPI_platform();
 
 
-#endif /* DPIEXT_H_INTERNAL */
+#endif /* !S3EPIXELDENSITY_INTERNAL_H */

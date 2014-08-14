@@ -15,5 +15,8 @@ files
 subprojects
 {
 	iwgx
-	extensions/dpiExt.mkf
+	#used for fixed point values and serialisation. prob want to replace both
+	#with something generic/not-IwGx based...
+
+	extension/s3ePixelDensity.mkf
 }

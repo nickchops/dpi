@@ -11,12 +11,12 @@
  * at build time.
  */
 #include "IwDebug.h"
-#include "dpiExt_autodefs.h"
+#include "s3ePixelDensity_autodefs.h"
 #include "s3eEdk.h"
-#include "dpiExt.h"
+#include "s3ePixelDensity.h"
 //Declarations of Init and Term functions
-extern s3eResult dpiExtInit();
-extern void dpiExtTerminate();
+extern s3eResult s3ePixelDensityInit();
+extern void s3ePixelDensityTerminate();
 
 
 // On platforms that use a seperate UI/OS thread we can autowrap functions
@@ -24,21 +24,21 @@ extern void dpiExtTerminate();
 // code is oftern build standalone, outside the main loader build.
 #if defined I3D_OS_IPHONE || defined I3D_OS_OSX || defined I3D_OS_LINUX || defined I3D_OS_WINDOWS
 
-static int dpiExtGetDeviceDPI_wrap()
+static int s3ePixelDensityGetPPI_wrap()
 {
-    IwTrace(DPIEXT_VERBOSE, ("calling dpiExt func on main thread: dpiExtGetDeviceDPI"));
-    return (int)(intptr_t)s3eEdkThreadRunOnOS((s3eEdkThreadFunc)dpiExtGetDeviceDPI, 0);
+    IwTrace(PIXELDENSITY_VERBOSE, ("calling s3ePixelDensity func on main thread: s3ePixelDensityGetPPI"));
+    return (int)(intptr_t)s3eEdkThreadRunOnOS((s3eEdkThreadFunc)s3ePixelDensityGetPPI, 0);
 }
 
-#define dpiExtGetDeviceDPI dpiExtGetDeviceDPI_wrap
+#define s3ePixelDensityGetPPI s3ePixelDensityGetPPI_wrap
 
 #endif
 
-void dpiExtRegisterExt()
+void s3ePixelDensityRegisterExt()
 {
     /* fill in the function pointer struct for this extension */
     void* funcPtrs[1];
-    funcPtrs[0] = (void*)dpiExtGetDeviceDPI;
+    funcPtrs[0] = (void*)s3ePixelDensityGetPPI;
 
     /*
      * Flags that specify the extension's use of locking and stackswitching
@@ -48,28 +48,28 @@ void dpiExtRegisterExt()
     /*
      * Register the extension
      */
-    s3eEdkRegister("dpiExt", funcPtrs, sizeof(funcPtrs), flags, dpiExtInit, dpiExtTerminate, 0);
+s3eEdkRegister("s3ePixelDensity", funcPtrs, sizeof(funcPtrs), flags, s3ePixelDensityInit, s3ePixelDensityTerminate, 0);
 }
 
 #if !defined S3E_BUILD_S3ELOADER
 
 #if defined S3E_EDK_USE_STATIC_INIT_ARRAY
-int dpiExtStaticInit()
+int s3ePixelDensityStaticInit()
 {
     void** p = g_StaticInitArray;
     void* end = p + g_StaticArrayLen;
     while (*p) p++;
     if (p < end)
-        *p = (void*)&dpiExtRegisterExt;
+        *p = (void*)&s3ePixelDensityRegisterExt;
     return 0;
 }
 
-int g_dpiExtVal = dpiExtStaticInit();
+int g_s3ePixelDensityVal = s3ePixelDensityStaticInit();
 
 #elif defined S3E_EDK_USE_DLLS
 S3E_EXTERN_C S3E_DLL_EXPORT void RegisterExt()
 {
-    dpiExtRegisterExt();
+    s3ePixelDensityRegisterExt();
 }
 #endif
 
