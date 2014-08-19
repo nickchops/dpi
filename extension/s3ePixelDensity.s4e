@@ -1,5 +1,20 @@
 include:
 #include <s3eTypes.h>
 
+/**
+ * Pixel Density Extension
+ *
+ * This extension allows the application to get real pixel density values from the OS.
+ * Use this with the middleware module PixelDensity to also get know values for devices
+ * by ID and guessed fallbacks. Note that iOS values are provided by PixelDensity and not
+ * in this extension.
+ *
+ * @supported{
+ *             @platform{Android,android}
+ *             @platform{Windows,windows}
+ * }
+ *
+ */
+
 functions:
 int s3ePixelDensityGetPPI() -1 run_on_os_thread

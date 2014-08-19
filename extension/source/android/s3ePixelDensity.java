@@ -5,18 +5,22 @@ Add android-specific functionality here.
 
 These functions are called via JNI from native code.
 */
-/*
- * NOTE: This file was originally written by the extension builder, but will not
- * be overwritten (unless --force is specified) and is intended to be modified.
- */
+
 import com.ideaworks3d.marmalade.LoaderAPI;
-// Comment in the following line if you want to use ResourceUtility
-// import com.ideaworks3d.marmalade.ResourceUtility;
+import com.ideaworks3d.marmalade.LoaderActivity;
+
+import android.app.Activity;
+import android.os.Bundle;
+import android.view.Display;
+import android.view.WindowManager;
+import android.util.DisplayMetrics;
+import android.content.Context;
 
 class s3ePixelDensity
 {
     public int s3ePixelDensityGetPPI()
     {
-        return 0;
+        DisplayMetrics metrics = LoaderAPI.getActivity().getApplicationContext().getResources().getDisplayMetrics();
+        return (int)(metrics.xdpi + metrics.ydpi)/2;
     }
 }

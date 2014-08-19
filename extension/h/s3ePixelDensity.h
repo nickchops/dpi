@@ -17,6 +17,21 @@
 #define S3E_EXT_PIXELDENSITY_H
 
 #include <s3eTypes.h>
+
+/**
+ * Pixel Density Extension
+ *
+ * This extension allows the application to get real pixel density values from the OS.
+ * Use this with the middleware module PixelDensity to also get know values for devices
+ * by ID and guessed fallbacks. Note that iOS values are provided by PixelDensity and not
+ * in this extension.
+ *
+ * @supported{
+ *             @platform{Android,android}
+ *             @platform{Windows,windows}
+ * }
+ *
+ */
 // \cond HIDDEN_DEFINES
 S3E_BEGIN_C_DECL
 // \endcond
