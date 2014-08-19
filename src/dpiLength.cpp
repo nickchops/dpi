@@ -1,7 +1,7 @@
 #include <IwTextParserITX.h>
 #include <dpiLength.h>
 
-using namespace DPI;
+using namespace PixelDensity;
 
 void CdpiLength::Serialise()
 {

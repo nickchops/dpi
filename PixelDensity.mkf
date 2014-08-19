@@ -1,0 +1,22 @@
+includepaths
+{
+	"h"
+}
+
+files
+{
+	["Src"]
+	src/PixelDensity.cpp
+	src/dpiLength.cpp
+	["h"]
+	h/PixelDensity.h
+	h/dpiLength.h
+	h/dpiLengthUnit.h
+}
+
+subprojects
+{
+	iwgx #used for fixed point values and serialisation. prob want to replace both with something generic/not-IwGx based
+
+	./extension/s3ePixelDensity #NB, need ./ for subprojects in subfolders!
+}

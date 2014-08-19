@@ -1,14 +1,15 @@
-#include <IwDebug.h>
-#include <dpiInfo.h>
-#include <dpiExt.h>
+#include "IwDebug.h"
+#include "PixelDensity.h"
+#include "s3ePixelDensity.h"
+#include "s3eSurface.h"
+#include "s3eDevice.h"
+#include <string.h>
 
-namespace DPI
+namespace PixelDensity
 {
-	int initCounter = 0;
-	bool g_dpiCached = false;
-	int g_dpiCachedValue = 96;
+	int g_ppiCachedValue = 0;
 
-	int32 dpiGetScreenDPI_iOS()
+	int32 ppiGetScreenPPI_iOS()
 	{
         // For iOS, we hard code the values as they are not available via API
         // but the OS has a relatively small set of screen types
@@ -17,7 +18,7 @@ namespace DPI
         
         int width = s3eSurfaceGetInt(S3E_SURFACE_DEVICE_WIDTH);
         int height = s3eSurfaceGetInt(S3E_SURFACE_DEVICE_HEIGHT);
-        const char* deviceId = s3eDeviceGetInt(S3E_DEVICE_ID);
+        const char* deviceId = s3eDeviceGetString(S3E_DEVICE_ID);
         
         const char* IPHONE = "iPhone";
         const char* IPOD = "iPod";
@@ -47,14 +48,13 @@ namespace DPI
         }
         
         //retina mini
-        else if (strcmp(deiceId, "iPad4,4") || strcmp(deviceId, "iPad4,5"))
+        else if (strcmp(deviceId, "iPad4,4") || strcmp(deviceId, "iPad4,5"))
             return 326;
         
-        //future proof guess! iPhone 6 likely same DPI as 5 but with larger screen
+        //future proof guess! iPhone 6 likely same PPI as 5 but with larger screen
         //estimated screen size is 4.7 inch, maybe another larger version too
-        //assuming f pixel count gets v high then DPI
-        else if strncmp(deviceId, IPHONE, strlen(IPHONE) == 0
-                        || strncmp(deviceId, IPOD, strlen(IPOD) == 0)
+        else if (strncmp(deviceId, IPHONE, strlen(IPHONE)) == 0
+                        || strncmp(deviceId, IPOD, strlen(IPOD)) == 0)
         {
             if (width < 1280)
                 return 326;
@@ -69,48 +69,42 @@ namespace DPI
 
 }
 
-using namespace DPI;
+using namespace PixelDensity;
 
-void DPI::dpiInit()
+//TODO: may want to make this into a class
+// and pull loading values from file/ICF into it
+
+int32 PixelDensity::GetScreenPPI()
 {
-	++initCounter;
-	if (initCounter != 1)
-		return;
-
-	//IW_CLASS_REGISTER(CfthFont);
-}
-
-void DPI::dpiTerminate()
-{
-	--initCounter;
-	if (initCounter < 0)
-		IwAssertMsg(FREETYPE,false,("dpiTerminate doesn't match dpiInit"));
-	if (initCounter != 0)
-		return;
-}
-
-int32 DPI::dpiGetScreenDPI()
-{
-	if (g_dpiCached)
-		return g_dpiCachedValue;
+	if (g_ppiCachedValue)
+		return g_ppiCachedValue;
     
-    g_dpiCached = true;
+    if (s3ePixelDensityAvailable())
+        g_ppiCachedValue = s3ePixelDensityGetPPI(); //returns 0 on error
     
-    if (dpiExtAvailable())
-        g_dpiCachedValue = dpiExtGetDeviceDPI();
-    
-    if (!g_dpiCachedValue)
+    if (!g_ppiCachedValue)
     {
         switch (s3eDeviceGetInt(S3E_DEVICE_OS))
         {
-        case S3E_OS_ID_IPHONE:
-            g_dpiCachedValue = dpiGetScreenDPI_iOS();
-            break;
-        default:
-            g_dpiCachedValue = 216; //slightly aribitrary value: Average low res 7 inch tablet
-            break;
+            case S3E_OS_ID_IPHONE:
+                g_ppiCachedValue = ppiGetScreenPPI_iOS();
+                break;
+            case S3E_OS_ID_OSX:
+                if (s3eSurfaceGetInt(S3E_SURFACE_DEVICE_HEIGHT) > 1440)
+                    g_ppiCachedValue = 220; // Guess retina display
+                else
+                    g_ppiCachedValue = 109; // Average macbook pro
+                break;
+            case S3E_OS_ID_WINDOWS:
+            case S3E_OS_ID_WS8:
+            case S3E_OS_ID_WS81:
+                g_ppiCachedValue = 140; // Somewhere in the middle of 1000s of screens
+                break;
+            default:
+                g_ppiCachedValue = 216; //slightly aribitrary value: Average low res 7 inch tablet
+                break;
         }
     }
     
-	return g_dpiCachedValue;
+	return g_ppiCachedValue;
 }

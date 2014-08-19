@@ -1,10 +1,10 @@
 #pragma once
 
-#include "dpiInfo.h"
+#include "PixelDensity.h"
 #include "dpiLength.h"
-#include <iwgx.h>
+#include "iwgx.h"
 
-namespace DPI
+namespace PixelDensity
 {
 	struct CdpiLength
 	{
@@ -32,7 +32,7 @@ namespace DPI
 				if (res == 0) { if (Value>0) res=1; else res=-1;}
 				break;
 			case PT:
-				res = Value*dpiGetScreenDPI()/72/IW_GEOM_ONE;
+				res = Value*GetScreenPPI()/72/IW_GEOM_ONE;
 				if (res == 0) { if (Value>0) res=1; else res=-1;}
 				break;
 			case PERCENT:

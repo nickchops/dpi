@@ -1,0 +1,13 @@
+#!/usr/bin/env i3d_make_build.py
+
+files
+{
+	(src)
+	PixelDensityExample.cpp
+}
+
+subprojects
+{
+	iwgraphics
+	PixelDensity
+}

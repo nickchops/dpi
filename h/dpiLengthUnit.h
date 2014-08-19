@@ -1,6 +1,6 @@
 #pragma once
 
-namespace DPI
+namespace PixelDensity
 {
 	enum dpiLengthUnit
 	{
@@ -9,4 +9,3 @@ namespace DPI
 		PERCENT //Percent
 	};
 }
-

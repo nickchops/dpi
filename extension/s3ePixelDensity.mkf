@@ -45,5 +45,5 @@ deployments
 #lines will cause the extension builder to re-output this section.
 deployments
 {
-    win32-ext-dll="lib/win32/s3ePixelDensity.dll"
+    #win32-ext-dll="lib/win32/s3ePixelDensity.dll"
 }
