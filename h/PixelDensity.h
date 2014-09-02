@@ -1,6 +1,10 @@
 #pragma once
 
-namespace PixelDensity
-{
-	int GetScreenPPI();
+
+// tolua_begin
+
+namespace PixelDensity{
+int GetScreenPPI();
 }
+
+// tolua_end
