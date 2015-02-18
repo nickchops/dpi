@@ -29,6 +29,10 @@
  * @supported{
  *             @platform{Android,android}
  *             @platform{Windows,windows}
+ *
+ * TODO: support OSX via CGDisplayScreenSize. Likely to just return 72 x pixel size,
+ * Can multiply up if retina isnt supported (should be able to get UI scale value)
+ * and if none of that works just do 72*screen width!
  * }
  *
  */

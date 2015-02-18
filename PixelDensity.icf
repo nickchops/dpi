@@ -1,0 +1,15 @@
+
+# This is an example icf that you would include if you find devices that
+# either don't return the expected value, or if the platform is not
+# supported (has no extension). You need put this in your game's ICF or
+# use options { app-icf="normal_app.icf, PixelDensity.icf, etc.icf" }
+
+[PixelDensity]
+
+{ID=ANDROID "Some Device"}
+ppi=123
+
+{ID=IPHONE "Some Other Device"}
+ppi=456
+
+{}

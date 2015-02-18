@@ -33,7 +33,7 @@ Marmalade version and can get Github updates easier.
 To add your github root to global search, put the following in
 marmalade-root/s3e/s3e-default.mkf:
 
-        options { module_paths="path/to/my/github/projects/root" }
+        options { module_path="path/to/my/github/projects/root" }
 
 Alternatively, copy the dpi folder to marmalade-root/modules.
 
@@ -113,6 +113,10 @@ wrapper just converts C++ namespace and types to quick table and types.
 
         local ppi = PixelDensity.GetScreenPPI()
 
+If using https://github.com/nickchops/MarmaladeQuickVirtualResolution you need to
+divide by the scale to position something by real world units. e.g.
+
+        local moveBy = 3 * ppi/vr.scale --3 inches on the screen in user space
 
 ------------------------------------------------------------------------------------------
 All code is provided under the MIT license unless stated otherwise:

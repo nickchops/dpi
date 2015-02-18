@@ -3,6 +3,7 @@
 #include "s3ePixelDensity.h"
 #include "s3eSurface.h"
 #include "s3eDevice.h"
+#include "s3eConfig.h"
 #include <string.h>
 
 namespace PixelDensity
@@ -78,6 +79,9 @@ int32 PixelDensity::GetScreenPPI()
 {
 	if (g_ppiCachedValue)
 		return g_ppiCachedValue;
+    
+    if (s3eConfigGetInt("PixelDensity", "ppi", &g_ppiCachedValue) == S3E_RESULT_SUCCESS)
+        return g_ppiCachedValue;
     
     if (s3ePixelDensityAvailable())
         g_ppiCachedValue = s3ePixelDensityGetPPI(); //returns 0 on error

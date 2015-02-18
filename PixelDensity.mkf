@@ -5,6 +5,7 @@ includepaths
 
 files
 {
+    PixelDensity.config.txt
 	["Src"]
 	src/PixelDensity.cpp
 	src/dpiLength.cpp

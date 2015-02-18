@@ -28,7 +28,7 @@ int main(int argc, char* argv[])
 
         int32 d = PixelDensity::GetScreenPPI();
         std::stringstream stream;
-        stream << "DPI = " << d;
+        stream << "PPI = " << d;
         std::string s = stream.str();
 
         IwGxPrintString(20,20,s.c_str());
