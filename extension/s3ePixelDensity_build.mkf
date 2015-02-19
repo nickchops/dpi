@@ -130,6 +130,21 @@ if {{defined I3D_OS_WS81}}
     }
 }
 
+if {{defined I3D_OS_WP81}}
+{
+    files
+    {
+        ["h"]
+        (source/wp81)
+        s3ePixelDensity_shim.h
+        ["source"]
+        (use_first_found, source/wp81, source/generic)
+        s3ePixelDensity_platform.cpp
+        s3ePixelDensity_shim.cpp
+        #Add any wp81-specific files here
+    }
+}
+
 files
 {
 

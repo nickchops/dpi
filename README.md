@@ -4,14 +4,24 @@ Pixel Density (PPI/DPI) library and extension for Marmalade SDK
 **Extension:**
 
 Gets the pixel density in PPI (pixels per inch) from the platform if available.
-Currently supported on Android and Windows desktop only. Android tested, Windows not
-tested yet.
+Currently supported on Android and Windows desktop only.
 
 **C++ code:**
 
-If extension not available or returns zero, this then sets density from a hard-
+If extension not available or returns 0/-1, this then sets density from a hard-
 coded set of device->density values, or by guesswork. Also has some utility
 conversion functions (currently disabled as out of date and not tested...)
+
+You can also override with [PixelDensity] ppi=xxx ICF setting
+
+On Windows: It uses GetDeviceCaps() HORZRES and HORZSIZE. HORZRES here is num
+of *virtual* pixels wide since the OS may be scaling up on high res screens.
+In marmalade 7.5 at least, desktop apps use the default scale for the screen
+and dont display 1:1 pixels. For example, surface pro 3 scales everything up
+by 50%. HORZSIZE is physical millimeters wide and doesnt change with scaling.
+This means the PPI value is "virtual pixels per inch", which is actually what
+you want if you want to measure real world distance on screen. Those windows
+APIs aren't guaranteed to work on all screens, but I've tested with SurfacePro.
 
 Originally created by Gleb Lebedev (https://github.com/gamemaster101gr).
 Tidied up/renamed and updated by Nick Smith to include iOS devices up to iPhone
@@ -116,7 +126,7 @@ wrapper just converts C++ namespace and types to quick table and types.
 If using https://github.com/nickchops/MarmaladeQuickVirtualResolution you need to
 divide by the scale to position something by real world units. e.g.
 
-        local moveBy = 3 * ppi/vr.scale --3 inches on the screen in user space
+        local moveBy = 3 * ppi/virtualResolution.scale --gives 3 inches on the screen in user space
 
 ------------------------------------------------------------------------------------------
 All code is provided under the MIT license unless stated otherwise:

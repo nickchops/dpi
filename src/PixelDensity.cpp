@@ -4,7 +4,8 @@
 #include "s3eSurface.h"
 #include "s3eDevice.h"
 #include "s3eConfig.h"
-#include <string.h>
+#include "string.h"
+#include <algorithm>
 
 namespace PixelDensity
 {
@@ -19,21 +20,24 @@ namespace PixelDensity
         
         int width = s3eSurfaceGetInt(S3E_SURFACE_DEVICE_WIDTH);
         int height = s3eSurfaceGetInt(S3E_SURFACE_DEVICE_HEIGHT);
+		int shortSide = std::min(width, height);
+		int longSide = std::max(width, height);
         const char* deviceId = s3eDeviceGetString(S3E_DEVICE_ID);
         
         const char* IPHONE = "iPhone";
         const char* IPOD = "iPod";
         const char* IPAD1 = "iPad1";
+		const char* IPHONE6 = "iPhone7";
         
         //iPhone 1->3gs & matching iPods
-        if (width == 480)
+		if (shortSide == 480)
             return 163;
         
-        //iPhone/iPod Retina
-        else if (width == 640)
+        //iPhone/iPod Retina up to 5s
+		else if (shortSide == 640)
             return 326;
         
-        else if (height == 768)
+		else if (shortSide == 768)
         {
             //iPad 1 & 2
             if (strncmp(deviceId, IPAD1, strlen(IPAD1)) == 0
@@ -48,19 +52,22 @@ namespace PixelDensity
                 return 163;
         }
         
-        //retina mini
-        else if (strcmp(deviceId, "iPad4,4") || strcmp(deviceId, "iPad4,5"))
-            return 326;
+        //retina mini and iPhone 6 (not plus)
+		else if (strcmp(deviceId, "iPad4,4") || strcmp(deviceId, "iPad4,5") || strcmp(deviceId, "iPhone7,2"))
+			return 326;
+
+		//iPhone 6 plus
+		else if (strcmp(deviceId, "iPhone7,1")) //yup, 6 Plus is 7.1, not 7.2
+			return 401;
         
-        //future proof guess! iPhone 6 likely same PPI as 5 but with larger screen
-        //estimated screen size is 4.7 inch, maybe another larger version too
+        //Attempt to future proof...
         else if (strncmp(deviceId, IPHONE, strlen(IPHONE)) == 0
                         || strncmp(deviceId, IPOD, strlen(IPOD)) == 0)
         {
-            if (width < 1280)
+            if (shortSide < 1080)
                 return 326;
             else
-                return 456; //= double iphone 5 resolution, on a 5 inch device!
+                return 401;
         }
         
         //retina ipad
@@ -73,7 +80,6 @@ namespace PixelDensity
 using namespace PixelDensity;
 
 //TODO: may want to make this into a class
-// and pull loading values from file/ICF into it
 
 int32 PixelDensity::GetScreenPPI()
 {
@@ -84,9 +90,9 @@ int32 PixelDensity::GetScreenPPI()
         return g_ppiCachedValue;
     
     if (s3ePixelDensityAvailable())
-        g_ppiCachedValue = s3ePixelDensityGetPPI(); //returns 0 on error
+        g_ppiCachedValue = s3ePixelDensityGetPPI(); //returns -1 on error
     
-    if (!g_ppiCachedValue)
+	if (g_ppiCachedValue < 1)
     {
         switch (s3eDeviceGetInt(S3E_DEVICE_OS))
         {

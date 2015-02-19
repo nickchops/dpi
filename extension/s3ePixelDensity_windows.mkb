@@ -12,3 +12,9 @@ options
 define S3E_BUILD_EXT
 
 subproject s3ePixelDensity_build
+
+library
+{
+	user32.lib
+	gdi32.lib
+}

@@ -9,6 +9,8 @@
 #include "s3ePixelDensity_internal.h"
 #include <Windows.h>
 
+#include "IwDebug.h"
+
 s3eResult s3ePixelDensityInit_platform()
 {
     // Add any platform-specific initialisation code here
@@ -22,9 +24,19 @@ void s3ePixelDensityTerminate_platform()
 
 int s3ePixelDensityGetPPI_platform()
 {
-    HDC hScreenDC = GetDC( NULL );
-    int PixelsX = GetDeviceCaps( hScreenDC, HORZRES );
-    int MMX = GetDeviceCaps( hScreenDC, HORZSIZE );
+	HDC hScreenDC = GetDC( NULL );
+    int pixelsWide = GetDeviceCaps( hScreenDC, HORZRES );
+    int millimetersWide = GetDeviceCaps( hScreenDC, HORZSIZE );
+
+	IwTrace(PIXELDENSITY, ("HORZRES (pixels wide, may be scaled) %d", pixelsWide));
+	IwTrace(PIXELDENSITY, ("HORZSIZE (millimeters wide, not scaled) %d", millimetersWide));
+
+	int ppi = 254 * pixelsWide / millimetersWide / 10;
+	IwTrace(PIXELDENSITY, ("Pixels Per Inch (may be scaled) = pixels / millimeters * 25.4 = %d", ppi));
+
+	IwTrace(PIXELDENSITY, ("LOGPIXELSX (pixels per 'logical inch' - Windows seems to scale this, so ignoring) %d", GetDeviceCaps(hScreenDC, LOGPIXELSX)));
+
     ReleaseDC( NULL, hScreenDC );
-    return 254*PixelsX/MMX/10;
+
+	return ppi;
 }
