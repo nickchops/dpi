@@ -32,6 +32,7 @@ static int s3ePixelDensityGetPPI_wrap()
 
 #define s3ePixelDensityGetPPI s3ePixelDensityGetPPI_wrap
 
+
 #endif
 
 void s3ePixelDensityRegisterExt()

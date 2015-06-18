@@ -47,6 +47,8 @@ s3eBool s3ePixelDensityAvailable();
 
 int s3ePixelDensityGetPPI();
 
+// \cond HIDDEN_DEFINES
 S3E_END_C_DECL
+// \endcond
 
 #endif /* !S3E_EXT_PIXELDENSITY_H */

@@ -1,137 +1,468 @@
-Archive member included because of file (symbol)
+Archive member included to satisfy reference by file (symbol)
 
-C:\marmalade\7.5.0\s3e\edk\lib\android/libedk.a(edk_helpers.o)
+C:\marmalade\7.8.0\s3e\edk\lib\android\libedk.a(edk_helpers.o)
                               release\s3ePixelDensity_platform.os (s3eEdkThreadRunOnOS)
+
+As-needed library included to satisfy reference by file (symbol)
+
+libplaceholderplaceholderplaceholderplaceholderplaceholder.so
+                              C:\marmalade\7.8.0\s3e\edk\lib\android\libedk.a(edk_helpers.o) (s3eEdkErrorSetStringV)
+libc.so                       C:/Android/android-ndk-r10e/platforms/android-14/arch-arm/usr/lib/crtbegin_so.o (__cxa_atexit)
 
 Discarded input sections
 
- .text          0x00000000       0x14 C:/Android/android-ndk-r9d/platforms/android-14/arch-arm/usr/lib/crtbegin_so.o
- .bss           0x00000000        0x0 C:/Android/android-ndk-r9d/platforms/android-14/arch-arm/usr/lib/crtbegin_so.o
+ .text          0x0000000000000000       0x34 C:/Android/android-ndk-r10e/platforms/android-14/arch-arm/usr/lib/crtbegin_so.o
+ .bss           0x0000000000000000        0x0 C:/Android/android-ndk-r10e/platforms/android-14/arch-arm/usr/lib/crtbegin_so.o
  .note.GNU-stack
-                0x00000000        0x0 C:/Android/android-ndk-r9d/platforms/android-14/arch-arm/usr/lib/crtbegin_so.o
- .group         0x00000000        0x8 release\s3ePixelDensity_platform.os
- .group         0x00000000        0x8 release\s3ePixelDensity_platform.os
- .text          0x00000000        0x0 release\s3ePixelDensity_platform.os
- .data          0x00000000        0x0 release\s3ePixelDensity_platform.os
+                0x0000000000000000        0x0 C:/Android/android-ndk-r10e/platforms/android-14/arch-arm/usr/lib/crtbegin_so.o
+ .group         0x0000000000000000        0x8 release\s3ePixelDensity_platform.os
+ .group         0x0000000000000000        0x8 release\s3ePixelDensity_platform.os
+ .text          0x0000000000000000        0x0 release\s3ePixelDensity_platform.os
+ .data          0x0000000000000000        0x0 release\s3ePixelDensity_platform.os
  .note.GNU-stack
-                0x00000000        0x0 release\s3ePixelDensity_platform.os
- .text          0x00000000        0x0 release\s3ePixelDensity.os
- .data          0x00000000        0x0 release\s3ePixelDensity.os
- .bss           0x00000000        0x0 release\s3ePixelDensity.os
+                0x0000000000000000        0x0 release\s3ePixelDensity_platform.os
+ .text          0x0000000000000000        0x0 release\s3ePixelDensity.os
+ .data          0x0000000000000000        0x0 release\s3ePixelDensity.os
+ .bss           0x0000000000000000        0x0 release\s3ePixelDensity.os
  .note.GNU-stack
-                0x00000000        0x0 release\s3ePixelDensity.os
- .text          0x00000000        0x0 release\s3ePixelDensity_register.os
- .data          0x00000000        0x0 release\s3ePixelDensity_register.os
- .bss           0x00000000        0x0 release\s3ePixelDensity_register.os
+                0x0000000000000000        0x0 release\s3ePixelDensity.os
+ .text          0x0000000000000000        0x0 release\s3ePixelDensity_register.os
+ .data          0x0000000000000000        0x0 release\s3ePixelDensity_register.os
+ .bss           0x0000000000000000        0x0 release\s3ePixelDensity_register.os
  .text._Z26s3ePixelDensityRegisterExtv
-                0x00000000       0x70 release\s3ePixelDensity_register.os
+                0x0000000000000000       0x60 release\s3ePixelDensity_register.os
  .note.GNU-stack
-                0x00000000        0x0 release\s3ePixelDensity_register.os
- .text          0x00000000        0x0 C:\marmalade\7.5.0\s3e\edk\lib\android/libedk.a(edk_helpers.o)
- .data          0x00000000        0x0 C:\marmalade\7.5.0\s3e\edk\lib\android/libedk.a(edk_helpers.o)
- .bss           0x00000000        0x0 C:\marmalade\7.5.0\s3e\edk\lib\android/libedk.a(edk_helpers.o)
+                0x0000000000000000        0x0 release\s3ePixelDensity_register.os
+ .text          0x0000000000000000        0x0 C:\marmalade\7.8.0\s3e\edk\lib\android\libedk.a(edk_helpers.o)
+ .data          0x0000000000000000        0x0 C:\marmalade\7.8.0\s3e\edk\lib\android\libedk.a(edk_helpers.o)
+ .bss           0x0000000000000000        0x0 C:\marmalade\7.8.0\s3e\edk\lib\android\libedk.a(edk_helpers.o)
  .text.s3eEdkErrorSetString
-                0x00000000       0x30 C:\marmalade\7.5.0\s3e\edk\lib\android/libedk.a(edk_helpers.o)
+                0x0000000000000000       0x30 C:\marmalade\7.8.0\s3e\edk\lib\android\libedk.a(edk_helpers.o)
  .text.s3eEdkThreadRunOnOSAsync
-                0x00000000       0x30 C:\marmalade\7.5.0\s3e\edk\lib\android/libedk.a(edk_helpers.o)
+                0x0000000000000000       0x30 C:\marmalade\7.8.0\s3e\edk\lib\android\libedk.a(edk_helpers.o)
  .note.GNU-stack
-                0x00000000        0x0 C:\marmalade\7.5.0\s3e\edk\lib\android/libedk.a(edk_helpers.o)
- .text          0x00000000        0x0 C:/Android/android-ndk-r9d/platforms/android-14/arch-arm/usr/lib/crtend_so.o
- .data          0x00000000        0x0 C:/Android/android-ndk-r9d/platforms/android-14/arch-arm/usr/lib/crtend_so.o
- .bss           0x00000000        0x0 C:/Android/android-ndk-r9d/platforms/android-14/arch-arm/usr/lib/crtend_so.o
+                0x0000000000000000        0x0 C:\marmalade\7.8.0\s3e\edk\lib\android\libedk.a(edk_helpers.o)
+ .text          0x0000000000000000        0x0 C:/Android/android-ndk-r10e/platforms/android-14/arch-arm/usr/lib/crtend_so.o
+ .data          0x0000000000000000        0x0 C:/Android/android-ndk-r10e/platforms/android-14/arch-arm/usr/lib/crtend_so.o
+ .bss           0x0000000000000000        0x0 C:/Android/android-ndk-r10e/platforms/android-14/arch-arm/usr/lib/crtend_so.o
  .note.GNU-stack
-                0x00000000        0x0 C:/Android/android-ndk-r9d/platforms/android-14/arch-arm/usr/lib/crtend_so.o
+                0x0000000000000000        0x0 C:/Android/android-ndk-r10e/platforms/android-14/arch-arm/usr/lib/crtend_so.o
 
-Memory map
+Memory Configuration
 
- ** file header
-                0x00000000       0x34
- ** segment headers
-                0x00000034       0xe0
+Name             Origin             Length             Attributes
+*default*        0x0000000000000000 0xffffffffffffffff
 
-.interp         0x00000114       0x13
- ** fill        0x00000114       0x13
+Linker script and memory map
 
-.dynsym         0x00000128       0xc0
- ** dynsym      0x00000128       0xc0
+LOAD C:/Android/android-ndk-r10e/platforms/android-14/arch-arm/usr/lib/crtbegin_so.o
+LOAD release\s3ePixelDensity_platform.os
+LOAD release\s3ePixelDensity.os
+LOAD release\s3ePixelDensity_register.os
+LOAD C:\marmalade\7.8.0\s3e\edk\lib\android\libedk.a
+LOAD C:\marmalade\7.8.0\s3e\edk\lib\android/libplaceholderplaceholderplaceholderplaceholderplaceholder.so
+LOAD C:\Android\android-ndk-r10e\platforms\android-14\arch-arm\usr\lib/liblog.so
+LOAD C:\Android\android-ndk-r10e\sources\cxx-stl\gnu-libstdc++\4.8\libs\armeabi\libgnustl_static.a
+LOAD c:/android/android-ndk-r10e/toolchains/arm-linux-androideabi-4.8/prebuilt/windows-x86_64/bin/../lib/gcc/arm-linux-androideabi/4.8\libgcc.a
+LOAD C:\Android\android-ndk-r10e\platforms\android-14\arch-arm\usr\lib/libstdc++.so
+LOAD C:\Android\android-ndk-r10e\platforms\android-14\arch-arm\usr\lib/libm.so
+LOAD C:\Android\android-ndk-r10e\platforms\android-14\arch-arm\usr\lib/libc.so
+LOAD c:/android/android-ndk-r10e/toolchains/arm-linux-androideabi-4.8/prebuilt/windows-x86_64/bin/../lib/gcc/arm-linux-androideabi/4.8\libgcc.a
+LOAD C:\Android\android-ndk-r10e\platforms\android-14\arch-arm\usr\lib/libc.so
+LOAD C:\Android\android-ndk-r10e\platforms\android-14\arch-arm\usr\lib/libdl.so
+LOAD c:/android/android-ndk-r10e/toolchains/arm-linux-androideabi-4.8/prebuilt/windows-x86_64/bin/../lib/gcc/arm-linux-androideabi/4.8\libgcc.a
+LOAD C:/Android/android-ndk-r10e/platforms/android-14/arch-arm/usr/lib/crtend_so.o
+                0x00000000000000d4                . = (0x0 + SIZEOF_HEADERS)
 
-.dynstr         0x000001e8       0xea
- ** string table
-                0x000001e8       0xea
+.note.gnu.build-id
+ *(.note.gnu.build-id)
 
-.hash           0x000002d4       0x44
- ** hash        0x000002d4       0x44
+.hash           0x00000000000000d4       0x50
+ *(.hash)
+ .hash          0x00000000000000d4       0x50 C:/Android/android-ndk-r10e/platforms/android-14/arch-arm/usr/lib/crtbegin_so.o
 
-.rel.dyn        0x00000318       0x20
- ** dynamic relocs
-                0x00000318       0x20
+.gnu.hash
+ *(.gnu.hash)
 
-.rel.plt        0x00000338       0x20
- ** dynamic relocs
-                0x00000338       0x20
+.dynsym         0x0000000000000124       0xf0
+ *(.dynsym)
+ .dynsym        0x0000000000000124       0xf0 C:/Android/android-ndk-r10e/platforms/android-14/arch-arm/usr/lib/crtbegin_so.o
 
-.plt            0x00000358       0x44
- ** PLT         0x00000358       0x44
+.dynstr         0x0000000000000214       0xcf
+ *(.dynstr)
+ .dynstr        0x0000000000000214       0xcf C:/Android/android-ndk-r10e/platforms/android-14/arch-arm/usr/lib/crtbegin_so.o
 
-.text           0x0000039c      0x3d0
- .text.exit     0x0000039c       0x10 C:/Android/android-ndk-r9d/platforms/android-14/arch-arm/usr/lib/crtbegin_so.o
-                0x0000039c                __on_dlclose
+.gnu.version    0x00000000000002e4        0x0
+ *(.gnu.version)
+ .gnu.version   0x00000000000002e4        0x0 C:/Android/android-ndk-r10e/platforms/android-14/arch-arm/usr/lib/crtbegin_so.o
+
+.gnu.version_d  0x00000000000002e4        0x0
+ *(.gnu.version_d)
+ .gnu.version_d
+                0x00000000000002e4        0x0 C:/Android/android-ndk-r10e/platforms/android-14/arch-arm/usr/lib/crtbegin_so.o
+
+.gnu.version_r  0x00000000000002e4        0x0
+ *(.gnu.version_r)
+ .gnu.version_r
+                0x00000000000002e4        0x0 C:/Android/android-ndk-r10e/platforms/android-14/arch-arm/usr/lib/crtbegin_so.o
+
+.rel.dyn        0x00000000000002e4       0x20
+ *(.rel.init)
+ *(.rel.text .rel.text.* .rel.gnu.linkonce.t.*)
+ *(.rel.fini)
+ *(.rel.rodata .rel.rodata.* .rel.gnu.linkonce.r.*)
+ *(.rel.data.rel.ro .rel.data.rel.ro.* .rel.gnu.linkonce.d.rel.ro.*)
+ *(.rel.data .rel.data.* .rel.gnu.linkonce.d.*)
+ *(.rel.tdata .rel.tdata.* .rel.gnu.linkonce.td.*)
+ *(.rel.tbss .rel.tbss.* .rel.gnu.linkonce.tb.*)
+ *(.rel.ctors)
+ *(.rel.dtors)
+ *(.rel.got)
+ .rel.got       0x00000000000002e4       0x18 C:/Android/android-ndk-r10e/platforms/android-14/arch-arm/usr/lib/crtbegin_so.o
+ *(.rel.bss .rel.bss.* .rel.gnu.linkonce.b.*)
+ *(.rel.iplt)
+ .rel.iplt      0x00000000000002fc        0x0 C:/Android/android-ndk-r10e/platforms/android-14/arch-arm/usr/lib/crtbegin_so.o
+ .rel.fini_array
+                0x00000000000002fc        0x8 C:/Android/android-ndk-r10e/platforms/android-14/arch-arm/usr/lib/crtbegin_so.o
+
+.rela.dyn
+ *(.rela.init)
+ *(.rela.text .rela.text.* .rela.gnu.linkonce.t.*)
+ *(.rela.fini)
+ *(.rela.rodata .rela.rodata.* .rela.gnu.linkonce.r.*)
+ *(.rela.data .rela.data.* .rela.gnu.linkonce.d.*)
+ *(.rela.tdata .rela.tdata.* .rela.gnu.linkonce.td.*)
+ *(.rela.tbss .rela.tbss.* .rela.gnu.linkonce.tb.*)
+ *(.rela.ctors)
+ *(.rela.dtors)
+ *(.rela.got)
+ *(.rela.bss .rela.bss.* .rela.gnu.linkonce.b.*)
+ *(.rela.iplt)
+
+.rel.plt        0x0000000000000304       0x20
+ *(.rel.plt)
+ .rel.plt       0x0000000000000304       0x20 C:/Android/android-ndk-r10e/platforms/android-14/arch-arm/usr/lib/crtbegin_so.o
+
+.rela.plt
+ *(.rela.plt)
+
+.init
+ *(SORT(.init))
+
+.plt            0x0000000000000324       0x44
+ *(.plt)
+ .plt           0x0000000000000324       0x44 C:/Android/android-ndk-r10e/platforms/android-14/arch-arm/usr/lib/crtbegin_so.o
+
+.iplt           0x0000000000000368        0x0
+ *(.iplt)
+ .iplt          0x0000000000000368        0x0 C:/Android/android-ndk-r10e/platforms/android-14/arch-arm/usr/lib/crtbegin_so.o
+
+.text           0x0000000000000368      0x3b4
+ *(.text.unlikely .text.*_unlikely .text.unlikely.*)
+ *(.text.exit .text.exit.*)
+ .text.exit     0x0000000000000368       0x10 C:/Android/android-ndk-r10e/platforms/android-14/arch-arm/usr/lib/crtbegin_so.o
+                0x0000000000000368                __on_dlclose
+ *(.text.startup .text.startup.*)
+ *(.text.hot .text.hot.*)
+ *(.text .stub .text.* .gnu.linkonce.t.*)
  .text._ZL27s3eEdkAndroidFindClass_realPKc
-                0x000003ac       0xb8 release\s3ePixelDensity_platform.os
+                0x0000000000000378       0xb8 release\s3ePixelDensity_platform.os
  .text._ZN7_JNIEnv9NewObjectEP7_jclassP10_jmethodIDz
-                0x00000464       0x38 release\s3ePixelDensity_platform.os
-                0x00000464                _JNIEnv::NewObject(_jclass*, _jmethodID*, ...)
+                0x0000000000000430       0x38 release\s3ePixelDensity_platform.os
+                0x0000000000000430                _JNIEnv::NewObject(_jclass*, _jmethodID*, ...)
  .text._ZN7_JNIEnv13CallIntMethodEP8_jobjectP10_jmethodIDz
-                0x0000049c       0x38 release\s3ePixelDensity_platform.os
-                0x0000049c                _JNIEnv::CallIntMethod(_jobject*, _jmethodID*, ...)
+                0x0000000000000468       0x38 release\s3ePixelDensity_platform.os
+                0x0000000000000468                _JNIEnv::CallIntMethod(_jobject*, _jmethodID*, ...)
  .text._Z28s3ePixelDensityInit_platformv
-                0x000004d4      0x178 release\s3ePixelDensity_platform.os
-                0x000004d4                s3ePixelDensityInit_platform()
+                0x00000000000004a0      0x178 release\s3ePixelDensity_platform.os
+                0x00000000000004a0                s3ePixelDensityInit_platform()
  .text._Z33s3ePixelDensityTerminate_platformv
-                0x0000064c        0x4 release\s3ePixelDensity_platform.os
-                0x0000064c                s3ePixelDensityTerminate_platform()
+                0x0000000000000618        0x4 release\s3ePixelDensity_platform.os
+                0x0000000000000618                s3ePixelDensityTerminate_platform()
  .text._Z30s3ePixelDensityGetPPI_platformv
-                0x00000650       0x50 release\s3ePixelDensity_platform.os
-                0x00000650                s3ePixelDensityGetPPI_platform()
+                0x000000000000061c       0x50 release\s3ePixelDensity_platform.os
+                0x000000000000061c                s3ePixelDensityGetPPI_platform()
  .text._Z19s3ePixelDensityInitv
-                0x000006a0        0x4 release\s3ePixelDensity.os
-                0x000006a0                s3ePixelDensityInit()
+                0x000000000000066c        0x4 release\s3ePixelDensity.os
+                0x000000000000066c                s3ePixelDensityInit()
  .text._Z24s3ePixelDensityTerminatev
-                0x000006a4        0x4 release\s3ePixelDensity.os
-                0x000006a4                s3ePixelDensityTerminate()
+                0x0000000000000670        0x4 release\s3ePixelDensity.os
+                0x0000000000000670                s3ePixelDensityTerminate()
  .text.s3ePixelDensityGetPPI
-                0x000006a8        0x4 release\s3ePixelDensity.os
-                0x000006a8                s3ePixelDensityGetPPI
+                0x0000000000000674        0x4 release\s3ePixelDensity.os
+                0x0000000000000674                s3ePixelDensityGetPPI
  .text._ZL26s3ePixelDensityGetPPI_wrapv
-                0x000006ac       0x20 release\s3ePixelDensity_register.os
+                0x0000000000000678       0x14 release\s3ePixelDensity_register.os
  .text.RegisterExt
-                0x000006cc       0x70 release\s3ePixelDensity_register.os
-                0x000006cc                RegisterExt
+                0x000000000000068c       0x60 release\s3ePixelDensity_register.os
+                0x000000000000068c                RegisterExt
  .text.s3eEdkThreadRunOnOS
-                0xffffffffffffffff       0x30 C:\marmalade\7.5.0\s3e\edk\lib\android/libedk.a(edk_helpers.o)
-                0x0000073c                s3eEdkThreadRunOnOS
+                0x00000000000006ec       0x30 C:\marmalade\7.8.0\s3e\edk\lib\android\libedk.a(edk_helpers.o)
+                0x00000000000006ec                s3eEdkThreadRunOnOS
+ *(.gnu.warning)
+ *(.glue_7t)
+ .glue_7t       0x000000000000071c        0x0 linker stubs
+ *(.glue_7)
+ .glue_7        0x000000000000071c        0x0 linker stubs
+ *(.vfp11_veneer)
+ .vfp11_veneer  0x000000000000071c        0x0 linker stubs
+ *(.v4_bx)
+ .v4_bx         0x000000000000071c        0x0 linker stubs
 
-.rodata         0x0000076c       0x38
- ** merge strings
-                0x0000076c       0x38
+.fini
+ *(SORT(.fini))
+                0x000000000000071c                PROVIDE (__etext, .)
+                0x000000000000071c                PROVIDE (_etext, .)
+                0x000000000000071c                PROVIDE (etext, .)
 
-.fini_array     0x00001eec        0x8
- .fini_array    0x00001eec        0x4 C:/Android/android-ndk-r9d/platforms/android-14/arch-arm/usr/lib/crtbegin_so.o
- .fini_array    0x00001ef0        0x4 C:/Android/android-ndk-r9d/platforms/android-14/arch-arm/usr/lib/crtend_so.o
+.rodata         0x000000000000071c       0x38
+ *(.rodata .rodata.* .gnu.linkonce.r.*)
+ .rodata.str1.4
+                0x000000000000071c       0x38 release\s3ePixelDensity_platform.os
+ .rodata.str1.4
+                0x0000000000000754       0x10 release\s3ePixelDensity_register.os
 
-.init_array     0x00001ef4        0x4
- .init_array    0x00001ef4        0x4 C:/Android/android-ndk-r9d/platforms/android-14/arch-arm/usr/lib/crtend_so.o
+.rodata1
+ *(.rodata1)
 
-.dynamic        0x00001ef8       0xe0
- ** dynamic     0x00001ef8       0xe0
+.ARM.extab
+ *(.ARM.extab* .gnu.linkonce.armextab.*)
+                0x0000000000000764                PROVIDE (__exidx_start, .)
 
-.got            0x00001fd8       0x28
- ** GOT         0x00001fd8        0xc
- ** GOT PLT     0x00001fe4       0x1c
+.ARM.exidx
+ *(.ARM.exidx* .gnu.linkonce.armexidx.*)
+                0x0000000000000764                PROVIDE (__exidx_end, .)
 
-.data           0x00002000        0x4
- .data          0x00002000        0x4 C:/Android/android-ndk-r9d/platforms/android-14/arch-arm/usr/lib/crtbegin_so.o
-                0x00002000                __dso_handle
+.eh_frame_hdr   0x0000000000000754        0x0
+ *(.eh_frame_hdr)
+ .eh_frame_hdr  0x0000000000000754        0x0 C:/Android/android-ndk-r10e/platforms/android-14/arch-arm/usr/lib/crtend_so.o
 
-.bss            0x00002004        0x8
- .bss           0x00002004        0x8 release\s3ePixelDensity_platform.os
+.eh_frame
+ *(.eh_frame)
+
+.gcc_except_table
+ *(.gcc_except_table .gcc_except_table.*)
+
+.exception_ranges
+ *(.exception_ranges .exception_ranges*)
+                0x0000000000010000                . = ALIGN (0x10000)
+                0x0000000000010ef4                . = DATA_SEGMENT_ALIGN (0x10000, 0x1000)
+
+.eh_frame
+ *(.eh_frame)
+
+.gcc_except_table
+ *(.gcc_except_table .gcc_except_table.*)
+
+.exception_ranges
+ *(.exception_ranges .exception_ranges*)
+
+.tdata
+ *(.tdata .tdata.* .gnu.linkonce.td.*)
+
+.tbss
+ *(.tbss .tbss.* .gnu.linkonce.tb.*)
+ *(.tcommon)
+                0x0000000000010ef4                . = ALIGN (0x4)
+
+.preinit_array
+ *(.preinit_array)
+
+.init_array     0x0000000000010ef4        0x4
+ *crtbegin*.o(.init_array)
+ *(SORT(.init_array.*) SORT(.ctors.*))
+ *(.init_array EXCLUDE_FILE(*crtend*.o *crtend.o *crtbegin*.o *crtbegin.o) .ctors)
+ .init_array    0x0000000000010ef4        0x4 C:/Android/android-ndk-r10e/platforms/android-14/arch-arm/usr/lib/crtend_so.o
+
+.fini_array     0x0000000000010ef8        0x8
+ *crtbegin*.o(.fini_array)
+ .fini_array    0x0000000000010ef8        0x4 C:/Android/android-ndk-r10e/platforms/android-14/arch-arm/usr/lib/crtbegin_so.o
+ *(SORT(.fini_array.*) SORT(.dtors.*))
+ *(.fini_array EXCLUDE_FILE(*crtend*.o *crtend.o *crtbegin*.o *crtbegin.o) .dtors)
+ .fini_array    0x0000000000010efc        0x4 C:/Android/android-ndk-r10e/platforms/android-14/arch-arm/usr/lib/crtend_so.o
+
+.ctors
+ *crtbegin.o(.ctors)
+ *crtbegin*.o(.ctors)
+ *(EXCLUDE_FILE(*crtend*.o *crtend.o) .ctors)
+ *(SORT(.ctors.*))
+ *(.ctors)
+
+.dtors
+ *crtbegin.o(.dtors)
+ *crtbegin*.o(.dtors)
+ *(EXCLUDE_FILE(*crtend*.o *crtend.o) .dtors)
+ *(SORT(.dtors.*))
+ *(.dtors)
+
+.jcr
+ *(.jcr)
+
+.data.rel.ro
+ *(.data.rel.ro.local* .gnu.linkonce.d.rel.ro.local.*)
+ *(.data.rel.ro .data.rel.ro.* .gnu.linkonce.d.rel.ro.*)
+
+.dynamic        0x0000000000010f00       0xd8
+ *(.dynamic)
+ .dynamic       0x0000000000010f00       0xd8 C:/Android/android-ndk-r10e/platforms/android-14/arch-arm/usr/lib/crtbegin_so.o
+                0x0000000000010f00                _DYNAMIC
+
+.got            0x0000000000010fd8       0x28
+ *(.got.plt)
+ .got.plt       0x0000000000010fd8       0x1c C:/Android/android-ndk-r10e/platforms/android-14/arch-arm/usr/lib/crtbegin_so.o
+                0x0000000000010fd8                _GLOBAL_OFFSET_TABLE_
+ *(.igot.plt)
+ .igot.plt      0x0000000000010ff4        0x0 C:/Android/android-ndk-r10e/platforms/android-14/arch-arm/usr/lib/crtbegin_so.o
+ *(.got)
+ .got           0x0000000000010ff4        0xc C:/Android/android-ndk-r10e/platforms/android-14/arch-arm/usr/lib/crtbegin_so.o
+ *(.igot)
+                0x0000000000011000                . = DATA_SEGMENT_RELRO_END (., 0x0)
+
+.data           0x0000000000011000        0x4
+                0x0000000000011000                PROVIDE (__data_start, .)
+ *(.data .data.* .gnu.linkonce.d.*)
+ .data          0x0000000000011000        0x4 C:/Android/android-ndk-r10e/platforms/android-14/arch-arm/usr/lib/crtbegin_so.o
+                0x0000000000011000                __dso_handle
+
+.data1
+ *(.data1)
+                0x0000000000011004                _edata = .
+                0x0000000000011004                PROVIDE (edata, .)
+                0x0000000000011004                . = .
+                0x0000000000011004                __bss_start = .
+                0x0000000000011004                __bss_start__ = .
+
+.bss            0x0000000000011004        0x8
+ *(.dynbss)
+ .dynbss        0x0000000000011004        0x0 C:/Android/android-ndk-r10e/platforms/android-14/arch-arm/usr/lib/crtbegin_so.o
+ *(.bss .bss.* .gnu.linkonce.b.*)
+ .bss           0x0000000000011004        0x8 release\s3ePixelDensity_platform.os
+ *(COMMON)
+                0x000000000001100c                . = ALIGN (0x4)
+                0x000000000001100c                _bss_end__ = .
+                0x000000000001100c                __bss_end__ = .
+                0x000000000001100c                . = ALIGN (0x4)
+                0x000000000001100c                . = SEGMENT_START ("ldata-segment", .)
+                0x000000000001100c                . = ALIGN (0x4)
+                0x000000000001100c                __end__ = .
+                0x000000000001100c                _end = .
+                0x000000000001100c                _bss_end__ = .
+                0x000000000001100c                __bss_end__ = .
+                0x000000000001100c                __end__ = .
+                0x000000000001100c                PROVIDE (end, .)
+                0x000000000001100c                . = DATA_SEGMENT_END (.)
+
+.stab
+ *(.stab)
+
+.stabstr
+ *(.stabstr)
+
+.stab.excl
+ *(.stab.excl)
+
+.stab.exclstr
+ *(.stab.exclstr)
+
+.stab.index
+ *(.stab.index)
+
+.stab.indexstr
+ *(.stab.indexstr)
+
+.comment        0x0000000000000000        0xf
+ *(.comment)
+ .comment       0x0000000000000000        0xf C:/Android/android-ndk-r10e/platforms/android-14/arch-arm/usr/lib/crtbegin_so.o
+                                         0x10 (size before relaxing)
+ .comment       0x000000000000000f       0x10 release\s3ePixelDensity_platform.os
+ .comment       0x000000000000000f       0x10 release\s3ePixelDensity.os
+ .comment       0x000000000000000f       0x10 release\s3ePixelDensity_register.os
+ .comment       0x000000000000000f       0x10 C:\marmalade\7.8.0\s3e\edk\lib\android\libedk.a(edk_helpers.o)
+
+.ARM.attributes
+                0x0000000000000000       0x2d
+ .ARM.attributes
+                0x0000000000000000       0x2b C:/Android/android-ndk-r10e/platforms/android-14/arch-arm/usr/lib/crtbegin_so.o
+ .ARM.attributes
+                0x000000000000002b       0x2f release\s3ePixelDensity_platform.os
+ .ARM.attributes
+                0x000000000000005a       0x2f release\s3ePixelDensity.os
+ .ARM.attributes
+                0x0000000000000089       0x2f release\s3ePixelDensity_register.os
+ .ARM.attributes
+                0x00000000000000b8       0x2f C:\marmalade\7.8.0\s3e\edk\lib\android\libedk.a(edk_helpers.o)
+ .ARM.attributes
+                0x00000000000000e7       0x1d C:/Android/android-ndk-r10e/platforms/android-14/arch-arm/usr/lib/crtend_so.o
+
+.debug
+ *(.debug)
+
+.line
+ *(.line)
+
+.debug_srcinfo
+ *(.debug_srcinfo)
+
+.debug_sfnames
+ *(.debug_sfnames)
+
+.debug_aranges
+ *(.debug_aranges)
+
+.debug_pubnames
+ *(.debug_pubnames)
+
+.debug_info
+ *(.debug_info .gnu.linkonce.wi.*)
+
+.debug_abbrev
+ *(.debug_abbrev)
+
+.debug_line
+ *(.debug_line .debug_line.* .debug_line_end)
+
+.debug_frame
+ *(.debug_frame)
+
+.debug_str
+ *(.debug_str)
+
+.debug_loc
+ *(.debug_loc)
+
+.debug_macinfo
+ *(.debug_macinfo)
+
+.debug_weaknames
+ *(.debug_weaknames)
+
+.debug_funcnames
+ *(.debug_funcnames)
+
+.debug_typenames
+ *(.debug_typenames)
+
+.debug_varnames
+ *(.debug_varnames)
+
+.debug_pubtypes
+ *(.debug_pubtypes)
+
+.debug_ranges
+ *(.debug_ranges)
+
+.debug_macro
+ *(.debug_macro)
+
+.gnu.attributes
+ *(.gnu.attributes)
+
+.note.gnu.arm.ident
+ *(.note.gnu.arm.ident)
+
+/DISCARD/
+ *(.note.GNU-stack)
+ *(.gnu_debuglink)
+ *(.gnu.lto_*)
+ *(.mdebug.*)
+OUTPUT(C:\Users\Nick\projects\dpi\extension\lib\android\libs3ePixelDensity.so elf32-littlearm)
